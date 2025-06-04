@@ -1,31 +1,31 @@
 # ───────────────────────────────────────────────────────────────────────────────
-# 1. 使用 “额外索引” 指向 PyTorch 官方 CUDA 11.8 仓库：
-#    当 PyPI 默认索引无法找到带 +cu118 后缀的包时，会到此地址拉取。
+# 使用 “额外索引” 指向 PyTorch 官方 CUDA 11.8 仓库：
+# 当 PyPI 默认索引无法找到带 +cu118 后缀的包时，会到此地址拉取。
 --extra-index-url https://download.pytorch.org/whl/cu118
 
 # ───────────────────────────────────────────────────────────────────────────────
-# 2. GPU 版 PyTorch（CUDA 11.8，支持 Python 3.12）
+# GPU 版 PyTorch（CUDA 11.8，支持 Python 3.12）
 torch==2.7.0+cu118
 torchvision==0.22.0+cu118
 torchaudio==2.7.0+cu118
 
 # ───────────────────────────────────────────────────────────────────────────────
-# 3. 核心科学计算库（已确认支持 Python 3.12 的版本）
+# 核心科学计算库（已确认支持 Python 3.12 的版本）
 numpy==1.26.3
 pandas==2.0.3
 scipy==1.12.0
-statsmodels==0.14.4
+statsmodels==0.13.5
 sympy==1.14.0
 
 # ───────────────────────────────────────────────────────────────────────────────
-# 4. 深度学习可视化与辅助工具包
-tensorboard               # 让 pip 自动选取支持 Python 3.12 的最新版
+# 深度学习可视化与辅助工具包
+tensorboard
 tensorboard-data-server==0.7.2
-tensorboardX              # 让 pip 自动选取支持 Python 3.12 的最新版
-timm==1.0.15              # 确认可在 Python 3.12 下找到对应 wheel
+tensorboardX
+timm==1.0.15
 
 # ───────────────────────────────────────────────────────────────────────────────
-# 5. 其余通用依赖（均从 PyPI 默认索引获取，且支持 Python 3.12）
+# 其余通用依赖（均从 PyPI 默认索引获取，且支持 Python 3.12）
 Markdown==3.7
 MarkupSafe==2.1.5
 PyYAML==6.0.2
@@ -71,8 +71,8 @@ rsa==4.9.1
 safetensors==0.5.3
 setuptools==80.9.0
 six==1.17.0
-tqdm                    # 让 pip 自动选取支持 Python 3.12 的最新版
-typeguard==4.24.0
+tqdm==4.82.0
+typeguard==4.4.2
 typing-extensions==4.18.0
 tzdata==2025.2
 urllib3==2.3.0
