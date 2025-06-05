@@ -52,3 +52,16 @@ The fine-tuning and evaluation instruction is in [FINETUNE.md](FINETUNE.md).
 
 ### License
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
+
+### Residual Two-Stage DMAE
+The repository also provides an example implementation of a residual conditioned two-stage DMAE model inspired by RCOT. The new modules are defined in `models_rcot.py` and a simple pre-training script `main_rcot_pretrain.py` is included.
+
+To pre-train the two-stage model using the released DMAE-Base weights run
+```bash
+python main_rcot_pretrain.py \
+  --pretrained PATH_TO_DMAE_BASE_WEIGHTS \
+  --data_path PATH_TO_IMAGENET \
+  --output_dir rcot_pretrain \
+  --epochs 100
+```
+After pre-training, the checkpoint can be fine-tuned or certified following the instructions in [FINETUNE.md](FINETUNE.md) by specifying `--finetune` with the new checkpoint path.
